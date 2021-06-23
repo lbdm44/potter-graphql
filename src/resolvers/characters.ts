@@ -1,6 +1,6 @@
 import characters from '../data/characters.json';
 
-interface Character {
+export interface Character {
   id: number;
   name: string;
   wand: string | null;

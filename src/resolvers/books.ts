@@ -1,4 +1,5 @@
 import books from '../data/books.json';
+import { Character } from './characters';
 
 interface Book {
   title: string;
@@ -7,8 +8,20 @@ interface Book {
     UK: string;
     US: string;
   };
+  characters: number[];
 }
 
-export default function resolveBooks(): Book[] {
+function resolveBooks(): Book[] {
   return books;
 }
+
+const bookResolvers = {
+  characters(): Character[] {
+    return [];
+  },
+};
+
+export default {
+  Book: bookResolvers,
+  books: resolveBooks,
+};
