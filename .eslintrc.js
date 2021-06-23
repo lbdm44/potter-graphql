@@ -1,19 +1,21 @@
 module.exports = {
   env: {
+    'jest/globals': true,
     node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:node/recommended',
+    'plugin:jest/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['dist/**/*.js'],
+  ignorePatterns: ['dist/**/*.js', 'dist'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'node', 'mocha', 'prettier'],
+  plugins: ['@typescript-eslint', 'node', 'jest', 'prettier'],
   rules: {
     'node/no-missing-import': 'off',
     'node/no-unsupported-features': 'off',
