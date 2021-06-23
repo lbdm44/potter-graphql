@@ -11,6 +11,7 @@
     "build": "tsc",
     "lint": "eslint",
     "prepublishOnly": "npm run build",
+    "start": "npm run build && node dist/index.js",
     "test": "mocha",
     "watch": "tsc --watch"
   },
@@ -25,9 +26,14 @@
     "url": "https://github.com/lbdm44/node-ts-boilerplate/issues"
   },
   "homepage": "https://github.com/lbdm44/node-ts-boilerplate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "apollo-server": "^2.18.2",
+    "graphql": "^15.3.0",
+    "scrape-it": "^5.2.4"
+  },
   "devDependencies": {
     "@types/assert": "^1.5.2",
+    "@types/graphql": "^14.5.0",
     "@types/mocha": "^8.0.3",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
