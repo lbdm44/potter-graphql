@@ -28,8 +28,7 @@
   "homepage": "https://github.com/lbdm44/node-ts-boilerplate#readme",
   "dependencies": {
     "apollo-server": "^2.18.2",
-    "graphql": "^15.3.0",
-    "scrape-it": "^5.2.4"
+    "graphql": "^15.3.0"
   },
   "devDependencies": {
     "@types/assert": "^1.5.2",
