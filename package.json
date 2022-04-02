@@ -27,10 +27,11 @@
   },
   "homepage": "https://github.com/lbdm44/node-ts-boilerplate#readme",
   "dependencies": {
-    "apollo-server": "^2.18.2",
-    "graphql": "^15.3.0"
+    "apollo-server": "^3.6.5",
+    "graphql": "^16.3.0"
   },
   "devDependencies": {
+    "@graphql-tools/utils": "^8.6.4",
     "@types/assert": "^1.5.2",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^26.0.23",
@@ -46,7 +47,7 @@
     "prettier": "^2.1.2",
     "ts-jest": "^27.0.3",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.6.2"
   },
   "husky": {
     "hooks": {
@@ -59,5 +60,8 @@
       "prettier --write"
     ],
     "*.{css,json,md}": "prettier --write"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }
