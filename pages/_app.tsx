@@ -1,16 +1,16 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
-import { ApolloProvider } from '@apollo/client';
 
-import apolloClient from '../graphql/apollo-client';
+import Layout from '../components/Layout';
 
-import '../styles/globals.css';
+import '../styles/tailwind.css';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ApolloProvider client={apolloClient}>
+    <Layout>
       <Component {...pageProps} />
-    </ApolloProvider>
+    </Layout>
   );
 };
 
-export default App;
+export default MyApp;

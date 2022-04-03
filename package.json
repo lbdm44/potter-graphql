@@ -5,13 +5,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=12.19.0"
+    "node": "16.x"
   },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "prepublishOnly": "npm run build",
     "test": "jest",
     "watch": "tsc --watch"
@@ -29,22 +29,31 @@
   "homepage": "https://github.com/lbdm44/node-ts-boilerplate#readme",
   "dependencies": {
     "@apollo/client": "^3.5.10",
+    "@auth0/nextjs-auth0": "^1.7.0",
+    "@prisma/client": "^3.11.1",
     "apollo-server": "^3.6.5",
+    "apollo-server-micro": "^3.6.7",
     "graphql": "^16.3.0",
+    "micro-cors": "^0.1.1",
     "next": "^12.1.4",
+    "nexus": "^1.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@graphql-tools/utils": "^8.6.4",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.2",
     "@types/assert": "^1.5.2",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^26.0.23",
+    "@types/micro-cors": "^0.1.2",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
+    "autoprefixer": "^10.4.4",
     "eslint": "^7.11.0",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-node": "^11.1.0",
@@ -52,10 +61,16 @@
     "husky": "^4.3.0",
     "jest": "^27.0.5",
     "lint-staged": "^10.4.0",
+    "postcss": "^8.4.12",
     "prettier": "^2.1.2",
+    "prisma": "^3.11.1",
+    "tailwindcss": "^3.0.23",
     "ts-jest": "^27.0.3",
-    "ts-node": "^9.0.0",
+    "ts-node": "^9.1.1",
     "typescript": "^4.6.2"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "husky": {
     "hooks": {
